@@ -52,8 +52,10 @@
 
 
  **neverssl.com** : HTML, favicon - Simple static page, no JS or CSS. 
-| **github.com** : HTML, CSS, JS, Images, Fonts, Fetch/XHR - Dynamic web application loading repositories, user data, and UI scripts. 
-| **youtube.com** : HTML, CSS, JS, Images, Video, XHR - Heavily dynamic with video streams, ads, analytics, and user interactions. 
+ 
+**github.com** : HTML, CSS, JS, Images, Fonts, Fetch/XHR - Dynamic web application loading repositories, user data, and UI scripts. 
+
+**youtube.com** : HTML, CSS, JS, Images, Video, XHR - Heavily dynamic with video streams, ads, analytics, and user interactions. 
 
 ---
 
@@ -84,7 +86,7 @@ In contrast, neverssl.com is a simple, static HTML page with no dynamic content,
 ### Explanation of Timing Phases
 
 **From Screenshot**: `dns_query.png`
-| **DNS Lookup** : Looksup for IP of the domain either in cache or through ISP.
-| **Connection Time** : Establishes TCP connection.
-| **Waiting (TTFB)** : “Time To First Byte” — waiting for the server’s first response. 
-| **Content Download** : Time to receive the remaining response data. 
+ **DNS Lookup** : Looksup for IP of the domain either in cache or through ISP.
+ **Connection Time** : Establishes TCP connection.
+ **Waiting (TTFB)** : “Time To First Byte” — waiting for the server’s first response. 
+ **Content Download** : Time to receive the remaining response data. 
