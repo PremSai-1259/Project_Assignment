@@ -22,8 +22,9 @@
 
 ### Data Visibility in Requests
 
- **HTTP** : ✅ Yes - All request and response data (headers, form fields, HTML) are visible as plain text. Anyone intercepting traffic can read or alter it. 
- **HTTPS** : ❌ No - The browser decrypts data locally for you, but on the network it appears as **encrypted bytes** — unreadable to outsiders. 
+ **HTTP** : Yes - All request and response data (headers, form fields, HTML) are visible as plain text. Anyone intercepting traffic can read or alter it.
+ 
+ **HTTPS** : No - The browser decrypts data locally for you, but on the network it appears as **encrypted bytes** — unreadable to outsiders. 
 
 ---
 
@@ -31,9 +32,9 @@
 
 **HTTPS (Hypertext Transfer Protocol Secure)** adds a layer of encryption using **TLS**, providing three essential protections that HTTP lacks:
 
-1. 🔒 **Encryption** – Data between browser and server is encrypted, ensuring confidentiality and preventing eavesdropping.
-2. ✅ **Authentication** – SSL certificates verify that you are communicating with the legitimate website (e.g., `youtube.com`) and not an imposter.
-3. 🧩 **Integrity** – Ensures that data is not modified in transit, guaranteeing the response you receive is authentic.
+1.  **Encryption** – Data between browser and server is encrypted, ensuring confidentiality and preventing eavesdropping.
+2.  **Authentication** – SSL certificates verify that you are communicating with the legitimate website (e.g., `youtube.com`) and not an imposter.
+3.  **Integrity** – Ensures that data is not modified in transit, guaranteeing the response you receive is authentic.
 
 ---
 
@@ -83,7 +84,7 @@ In contrast, neverssl.com is a simple, static HTML page with no dynamic content,
 ### Explanation of Timing Phases
 
 **From Screenshot**: `dns_query.png`
-| **DNS Lookup** : Resolves domain name to IP address. Search fot IP in the cache.
+| **DNS Lookup** : Looksup for IP of the domain either in cache or through ISP.
 | **Connection Time** : Establishes TCP connection.
 | **Waiting (TTFB)** : “Time To First Byte” — waiting for the server’s first response. 
 | **Content Download** : Time to receive the remaining response data. 
