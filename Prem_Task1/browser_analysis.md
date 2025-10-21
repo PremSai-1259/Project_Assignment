@@ -42,9 +42,11 @@
 
 ### Total Number of Requests
 
-| **neverssl.com**  2-requests 
-| **github.com**  161-requests 
-| **youtube.com**  154-requests
+ **neverssl.com**  2-requests 
+ 
+ **github.com**  161-requests 
+ 
+ **youtube.com**  154-requests
 
 ---
 
@@ -70,7 +72,9 @@ In contrast, neverssl.com is a simple, static HTML page with no dynamic content,
 ## 3. Performance Insights
 
 **neverssl.com** : 3.85sec Load Time
+
 **github.com** : 1.23sec Load Time
+
 **youtube.com** : 2.92sec Load Time
 
 ---
@@ -78,7 +82,9 @@ In contrast, neverssl.com is a simple, static HTML page with no dynamic content,
 ### Longest Requests
 
 **neverssl.com** - `/online/` : 3.83sec - Main document load — More delay due to network issues 
+
 **github.com** - `my_top_repositories` : 491msec - Fetches user data via API 
+
 **youtube.com** - `log_event` : 1.87sec 
 
 ---
@@ -86,7 +92,11 @@ In contrast, neverssl.com is a simple, static HTML page with no dynamic content,
 ### Explanation of Timing Phases
 
 **From Screenshot**: `dns_query.png`
+
  **DNS Lookup** : Looksup for IP of the domain either in cache or through ISP.
+ 
  **Connection Time** : Establishes TCP connection.
+ 
  **Waiting (TTFB)** : “Time To First Byte” — waiting for the server’s first response. 
+ 
  **Content Download** : Time to receive the remaining response data. 
