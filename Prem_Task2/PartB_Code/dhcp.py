@@ -16,7 +16,18 @@ class DHCP():
 
 
 class DNS():
-    pass                
+    registered_ips={}
+    def register(self,name,ip):
+        self.registered_ips[name]=ip
+        print(f'DNS registers {name} IP as {ip}')
+    
+    def resolve(self,name):
+        ip=self.registered_ips.get(name)
+        if ip:
+            return ip
+        else:
+            return None
+                
 
 
 class Node():
@@ -40,12 +51,23 @@ class Node():
     def request_dhcp(self):
         print(f'{self.name} requests DHCP for the IP {self.offered_ip}')
         dhcp.acknowledge(self.name,self.offered_ip)
+        self.ip=self.offered_ip
     
-    def connect_to_network(self):
+    def boot(self):
+        print(f'----------------------{self.name} booting----------------------')
         if self.discover_dhcp():
             self.request_dhcp()
         else:
             return
+        self.dns.register(self.name,self.offered_ip)
+    
+    def ping(self,target):
+        print(f'{self.name} send a DNS query looking up for {target}')
+        target_ip=self.dns.resolve(target)
+        if target_ip:
+            print(f'Pinging successful. {self.name}({self.ip}) is connected to {target}({target_ip})')
+        else:
+            print(f'Pinging failed.{target} is not a valid domain')
 
             
                       
@@ -55,8 +77,11 @@ dns=DNS()
 Node1=Node('Node1',dhcp,dns)
 Node2=Node('Node2',dhcp,dns)
 
-Node1.connect_to_network()
+Node1.boot()
 print('\n\n\n\n')
-Node2.connect_to_network()
+Node2.boot()
 
-
+print('\n\n\n\n')
+Node1.ping('Node2')
+print("\n\n\n")
+Node1.ping('Node3')
