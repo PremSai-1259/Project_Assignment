@@ -3,7 +3,7 @@ pragma solidity ^0.8.3;
 
 contract VPN {
     string greeting;
-    uint nodeCount;
+    uint256 nodeCount;
     address deployer;
 
     constructor() {
@@ -18,11 +18,11 @@ contract VPN {
         return greeting;
     }
 
-    function setNodeCount(uint count) public {
+    function setNodeCount(uint256 count) public {
         nodeCount = count;
     }
 
-    function getNodeCount() public view returns (uint) {
+    function getNodeCount() public view returns (uint256) {
         return nodeCount;
     }
 

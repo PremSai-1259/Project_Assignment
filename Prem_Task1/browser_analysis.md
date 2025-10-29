@@ -9,12 +9,12 @@
 ### Comparison of Request Headers
 
 #### **HTTP (neverssl.com)**
-- Request URL starts with `http://`
+- Request URL starts with http://
 - Protocol: http/1.1
 - All header information (Host, User-Agent, etc.) is sent in plain, readable text across the network.
 
 #### **HTTPS (github.com and youtube.com)**
-- Request URL starts with `https://`
+- Request URL starts with https://
 - Protocol: h2 (HTTP/2) — a faster and more secure modern protocol.
 - Headers are visible in DevTools for debugging, but are encrypted in actual transit.
 
@@ -33,7 +33,7 @@
 **HTTPS (Hypertext Transfer Protocol Secure)** adds a layer of encryption using **TLS**, providing three essential protections that HTTP lacks:
 
 1.  **Encryption** – Data between browser and server is encrypted, ensuring confidentiality and preventing eavesdropping.
-2.  **Authentication** – SSL certificates verify that you are communicating with the legitimate website (e.g., `youtube.com`) and not an imposter.
+2.  **Authentication** – SSL certificates verify that you are communicating with the legitimate website (e.g., youtube.com) and not an imposter.
 3.  **Integrity** – Ensures that data is not modified in transit, guaranteeing the response you receive is authentic.
 
 ---
@@ -81,17 +81,17 @@ In contrast, neverssl.com is a simple, static HTML page with no dynamic content,
 
 ### Longest Requests
 
-**neverssl.com** - `/online/` : 3.83sec - Main document load — More delay due to network issues 
+**neverssl.com** - /online/ : 3.83sec - Main document load — More delay due to network issues 
 
-**github.com** - `my_top_repositories` : 491msec - Fetches user data via API 
+**github.com** - my_top_repositories : 491msec - Fetches user data via API 
 
-**youtube.com** - `log_event` : 1.87sec 
+**youtube.com** - log_event : 1.87sec 
 
 ---
 
 ### Explanation of Timing Phases
 
-**From Screenshot**: `dns_query.png`
+**From Screenshot**: dns_query.png
 
  **DNS Lookup** : Looksup for IP of the domain either in cache or through ISP.
  
