@@ -36,8 +36,8 @@ It contains Javascript or Typescript Deployment files.These are used to deploy t
 ### Tests:
 It contains Javascript or Typescript Test file.These are used to test the contract on a local network.
 
---
+---
 ### hardhat.config.ts:
 It is the main configuration file in the project.It tells Hardhat how to compile,test and deploy the contarct.It contains solidity compiler version etc.
 
---
+---
