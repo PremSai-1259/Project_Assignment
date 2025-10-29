@@ -3,7 +3,7 @@ pragma solidity ^0.8.3;
 
 contract VPN {
     string greeting;
-    uint256 nodeCount;
+    uint256 nodeCount;     // State Varibales
     address deployer;
 
     constructor() {
